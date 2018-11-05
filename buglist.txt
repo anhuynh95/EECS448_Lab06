@@ -1,0 +1,32 @@
+Before run any test, I could not find a way to test the deconstructor so I
+assume the method is correct.
+
+isEmpty():
+  - Normally, we use size() method to set the conditions to define the list is
+  empty or not, but this method does not.
+  - I think the conditions in this method does not work properly and it does
+  not return the right bool value for the method. In addition, because the
+  conditions are not correct, the method always returns true as default.
+
+addBack():
+  - I found that the method does not act like an add back method in linked list.
+  Instead, it is more like an add front method.
+  - The bug in this method should lay in the section where we travel across the
+  list to find the final node to add (for or while loop). Otherwise, your loop
+  conditions or methods inside it is not correct.
+
+removeBack():
+  - The method never work like it suppose to be, nothing happen when the method
+    is called, size never changes.
+  - The reasons of this bug could be:
+    + The method was not implemented.
+    + There is no command delete in the method.
+    + The starting point before we loop to the end was not defined correctly.
+
+removeFront():
+  - Similar to removeBack(), nothing happen when the method is called, size
+    never changes.
+  - The reasons of this bug could be:
+    + The method was not implemented.
+    + There is no command delete in the method.
+    + Coder never pick the front node to delete
